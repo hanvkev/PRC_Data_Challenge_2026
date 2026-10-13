@@ -1,0 +1,24 @@
+[project]
+name = "prc-data-challenge-2026"
+version = "0.1.0"
+description = "PRC Data Challenge 2026: taxi-out time prediction (team talented-jelly)"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "catboost>=1.2.10",
+    "ipykernel>=7.3.0",
+    "jupyter>=1.1.1",
+    "matplotlib>=3.11.1",
+    "mlflow>=3.16.1",
+    "numpy>=2.4,<2.5",
+    "pandas<3.0",
+    "polars>=1.44.1",
+    "pyarrow>=25.0.1",
+    "pyopensky>=2.16",
+    "scikit-learn>=1.9.0",
+    "traffic",
+    "xplane-airports>=4.0.1",
+]
+
+[tool.uv.sources]
+traffic = { git = "https://github.com/xoolive/traffic.git", branch = "master" }

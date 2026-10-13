@@ -1,0 +1,18 @@
+{
+  "A": {
+    "run_id": "2a97c58055c641429638c1f74fa74751",
+    "run_name": "291_BaseA_CatBoost"
+  },
+  "B": {
+    "run_id": "c492e5c19f3a4e6cac86cf956a48d68a",
+    "run_name": "292_BaseB_CatBoost"
+  },
+  "C": {
+    "run_id": "0645226cdf6d4b3eadbe7dc06e028ffa",
+    "run_name": "294_Classifier_CatBoost"
+  },
+  "corrector": {
+    "run_id": "a305f283e7b144f6aef1e085d84bf44f",
+    "run_name": "295_Corrector"
+  }
+}

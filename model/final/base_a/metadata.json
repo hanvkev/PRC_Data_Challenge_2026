@@ -1,0 +1,49 @@
+{
+  "features": [
+    "ADEP_mvt",
+    "AIRCRAFT_TYPE_mvt",
+    "RUNWAY_mvt",
+    "AIRCRAFT_OPERATOR_flt",
+    "mvt_minus_aobt_sec",
+    "movement_minus_scheduled_offblock_sec",
+    "mvt_minus_lobt_sec",
+    "aobt_minus_eobt_sec",
+    "lobt_minus_eobt_sec",
+    "deps_before_30min",
+    "deps_before_30min_same_runway",
+    "deps_after_30min_same_runway",
+    "seconds_since_last_movement",
+    "dep_median_delay_30min_sec",
+    "weather_temperature_c",
+    "weather_visibility_km",
+    "movement_day_of_week_sin",
+    "movement_day_of_week_cos",
+    "adsb_movement_to_mvt_sec",
+    "adsb_first_observation_to_mvt_sec",
+    "adsb_movement_to_runway_direct_m",
+    "stand_reocc_gap_sec",
+    "stand_reocc_other_type",
+    "stand_prev_arr_gap_sec",
+    "median_taxi_out"
+  ],
+  "features_dynamic": [
+    "median_taxi_out"
+  ],
+  "trees": 9200,
+  "fit_rows": 2085041,
+  "refit_seconds": 2729.298418313265,
+  "fill_medians": {
+    "weather_visibility_km": {
+      "EDDF": 9.9,
+      "EDDM": 9.9,
+      "EGLL": 30.96,
+      "EHAM": 9.999,
+      "LEBL": 9.999,
+      "LEMD": 9.999,
+      "LFPG": 9.9,
+      "LIRF": 9.9,
+      "LSZH": 9.999,
+      "LTFM": 9.999
+    }
+  }
+}
