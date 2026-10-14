@@ -32,8 +32,8 @@ Comparing the label with the delay divides the 2025 departures into four groups 
 | long taxi | label above two hours that is not an artefact, including labels shifted by about one day | 0.01 % | 8330 s, up to about a day |
 
 The limit of 2000 s between on-time pushbacks and artefacts comes from the data. A label that equals the delay is a
-genuine taxi time only if the aircraft really left at its scheduled time, and in that case the NM data agree:
-`MVT − AOBT`, measured from the actual off-block time reported to NM, then matches the label as well. For delays up to
+genuine taxi time only if the aircraft really left at its scheduled time, and for flights with an AOBT the NM data then
+agree: `MVT − AOBT`, measured from the actual off-block time reported to NM, matches the label as well. For delays up to
 about 1500 s most of these labels pass this check, whereas from 2000 s onwards about four out of five fail it, so above
 that limit a label equal to the delay is usually an artefact. A higher limit such as 3000 s would treat the flights
 between 2000 s and 3000 s, most of which are artefacts, as genuine taxi times.
@@ -125,7 +125,8 @@ limits, the stand features of the classifier, the months the corrector learns fr
   exception: a month feature cannot be evaluated out of fold, so whether to use it in the base models and the classifier
   was decided on the leaderboard. Most ideas were rejected out of fold before any submission; they are listed in
   [results.md](results.md#tested-without-gain).
-- Running notebooks 06 to 11 again reproduces the out-of-fold figures, the models and the submission files exactly.
+- Running notebooks 06 to 11 a second time on the same machine, with the library versions of `uv.lock`, gave the same
+  out-of-fold figures and byte-identical submission files.
 
 ## The models and steps
 
