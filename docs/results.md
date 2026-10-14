@@ -226,7 +226,7 @@ years (`analysis/adsb_coverage.ipynb`); at EGLL it is much better in summer 2026
 
 | Idea | Result |
 |---|---|
-| Month as a feature in the base model or the classifier | worse on the leaderboard |
+| Month as a feature in the base model or the classifier | cannot be evaluated out of fold, because the predicted month is always an unseen value; worse on the leaderboard when tried |
 | Target encodings (artefact rate per stand or airline, long-taxi rate per stand) | worse in every combination |
 | Arrival delay wave in the base model | worse |
 | Traffic-flow, queue and geometry features in base A | no gain (they help base B) |

@@ -47,8 +47,9 @@ A = base A, B = base B, C = classifier, K = corrector.
 * **Stand and inbound.** Arrival block times are public. An aircraft that parked at the stand shortly before the
   take-off suggests that the departure had already left, which hints at a longer taxi time. The time at which the likely
   own inbound aircraft reached the stand, compared with the scheduled off-block, helps to tell genuine taxi times from
-  labels that equal the delay, especially where NM data are missing. Neither is a strict rule; for heavily delayed
-  flights, for example, other aircraft may have used the stand in the meantime.
+  labels that equal the delay, especially where NM data are missing. Both are only hints, not exact rules: when a flight
+  is heavily delayed because its own aircraft has not arrived yet, for example, other aircraft may park at the stand and
+  leave again before it departs, so an arrival at the stand does not prove that the departure had already left.
 * **Queue in front.** The off-block reference is the own AOBT, or the EOBT when AOBT is missing. Only NM times of the
   other departures are used, never their labels.
 * **ADS-B.** The first sustained movement (above 2 kn for at least 30 s) of the trajectory selected by

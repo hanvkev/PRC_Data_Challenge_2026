@@ -28,8 +28,9 @@ The final prediction weights the two cases, `final = corrected + p_artifact · (
 follow: a rule for one extreme situation at LIRF, and the LOBT window, which keeps every prediction within 3606 s of
 `MVT − LOBT` because every 2025 label of a flight with an LOBT lay within that window. All four models are CatBoost
 models trained on all twelve months of 2025. The development started on the leaderboard months January and July plus
-December only; in the final phase it moved to all twelve months, so that the final pipeline is not tuned to the months
-of the ranking ([docs/method.md](docs/method.md#how-choices-were-made)).
+December only; in the final phase it moved to all twelve months, and the choices that matter most were checked again on
+all of them. A few earlier choices still rest on January and July
+([docs/method.md](docs/method.md#how-choices-were-made)).
 
 ## Documentation
 

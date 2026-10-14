@@ -104,8 +104,8 @@ months together.
 For the prediction of new data every model is trained once more on all of 2025: the base models with the median number
 of trees of their twelve month models (`runner.train_blocks`, `runner.refit`), the classifier on all departures with a
 delay above 2000 s and the corrector on all out-of-fold rows. For the base models this step cannot be evaluated out of
-fold, because the final model has seen every month. It was chosen because a single model learns from all twelve months
-instead of eleven and avoids averaging twelve models that stopped at different numbers of trees.
+fold, because the final model has seen every month. A single final model was preferred over averaging the twelve month
+models, because it learns from all twelve months rather than eleven.
 
 ## How choices were made
 
@@ -121,8 +121,10 @@ limits, the stand features of the classifier, the months the corrector learns fr
 - Every comparison was made out of fold, month by month, both overall and on labels up to one hour, and separately for
   flights with and without an NM off-block time.
 - A small difference was accepted only if it pointed in the same direction in most months.
-- The daily leaderboard (January and July 2026) served to confirm candidates, not to tune parameters. Most ideas were
-  rejected out of fold before any submission; they are listed in [results.md](results.md#tested-without-gain).
+- The daily leaderboard (January and July 2026) served to confirm candidates, not to tune parameters, with one
+  exception: a month feature cannot be evaluated out of fold, so whether to use it in the base models and the classifier
+  was decided on the leaderboard. Most ideas were rejected out of fold before any submission; they are listed in
+  [results.md](results.md#tested-without-gain).
 - Running notebooks 06 to 11 again reproduces the out-of-fold figures, the models and the submission files exactly.
 
 ## The models and steps
